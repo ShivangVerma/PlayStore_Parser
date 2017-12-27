@@ -1,0 +1,69 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	    <script type="text/javascript" src="/assets/javascri/untitled.js"></script> 
+
+    </head>
+	<style>
+		input{
+			position: 100px;
+			width:100px;
+		}
+		body{
+			
+			background-image: url("assets/new.jpg");
+
+			font-family: monaco, monospace;
+			color:white;
+
+		}
+	</style>
+	
+	<body>
+	<h1>&nbsp;PlayStore Tracker</h1>
+		<br><br>
+		<div id = "input_p">
+
+			<span  style="padding:10px; margin-left:10px; font-size:xx-large;">Category:
+				<select name = "URL_key" id = "id_url" style="font-size:xx-large; color:black; width:auto">
+					<option>Top Free in Android Apps</option>
+					<option>Top Paid in Android Apps</option>
+					<option>Top Grossing Android Apps</option>
+					<option>Top Free in Games</option>
+					<option>Top Grossing Games</option>
+				</select>
+			</span>
+			<span style="margin-left:90px; font-size:xx-large;">
+				Country:
+					<select name = "Country" style="font-size:xx-large; color:black; width:auto" id = "id_Country">
+				<script>
+					var country = {'Albania':'al','Algeria':'dz','Angola':'ao','Antigua':'ag','Argentina':'ar','Armenia':'am','Aruba':'aw','Australia':'au','Austria':'at','Azerbaijan':'az','Bahamas':'bs','Bahrain':'bh','Bangladesh':'bd','Belarus':'by','Belgium':'be','Belize':'bz','Benin':'bj','Bolivia':'bo','Bosnia':'ba','Botswana':'bw','Brazil':'br','Bulgaria':'bg','Burkina':'bf','Cambodia':'kh','Cameroon':'cm','Canada':'ca','Cape':'cv','Chile':'cl','Colombia':'co','Costa':'cr','Cote':'ci','Croatia':'hr','Cyprus':'cy','Czech':'cz','Denmark':'dk','Dominican':'do','Ecuador':'ec','Egypt':'eg','El':'sv','Estonia':'ee','Fiji':'fj','Finland':'fi','France':'fr','Gabon':'ga','Germany':'de','Ghana':'gh','Greece':'gr','Guatemala':'gt','Guinea-Bissau':'gw','Haiti':'ht','Honduras':'hn','Hong':'hk','Hungary':'hu','Iceland':'is','India':'in','Indonesia':'id','Ireland':'ie','Israel':'il','Italy':'it','Jamaica':'jm','Japan':'jp','Jordan':'jo','Kazakhstan':'kz','Kenya':'ke','Kuwait':'kw','Kyrgyzstan':'kg','Laos':'la','Latvia':'lv','Lebanon':'lb','Liechtenstein':'li','Lithuania':'lt','Luxembourg':'lu','Macedonia':'mk','Malaysia':'my','Mali':'ml','Malta':'mt','Mauritius':'mu','Mexico':'mx','Moldova':'md','Morocco':'ma','Mozambique':'mz','Namibia':'na','Nepal':'np','Netherlands':'an','New':'nz','Nicaragua':'ni','Niger':'ne','Nigeria':'ng','Norway':'no','Oman':'om','Pakistan':'pk','Panama':'pa','Papua':'pg','Paraguay':'py','Peru':'pe','Philippines':'ph','Poland':'pl','Portugal':'pt','Qatar':'qa','Romania':'ro','Russia':'ru','Rwanda':'rw','Saudi':'sa','Senegal':'sn','Serbia':'rs','Singapore':'sg','Slovakia':'sk','Slovenia':'si','South':'kr','Spain':'es','Sri':'lk','Sweden':'se','Switzerland':'ch','Taiwan':'tw','Tajikistan':'tj','Tanzania':'tz','Thailand':'th','Togo':'tg', 'USA': 'us'}
+
+					var list = Object.keys(country)
+
+					for (i=0;i<119;i++){
+						str1 = "<option>%s</option>"
+						str = str1.replace('%s', list[i]);
+						document.write(str);
+					}
+
+				</script>
+				</select>
+
+			</span><br><br><br><br><br>
+			<lable style="margin-left:10px; padding:10px; font-size:x-large; height:80px">Start:</lable>
+			<input type= "number" id = "id_start" name = "start" style="margin-left:10px; font-size:small; width: auto; height:30px" placeholder="Enter a number"></input>
+			<br><br>
+			<button class="btn btn-primary" type="button" id = "id_submit" onclick = "makeRequest_re();" style="margin-left:19px;">Submit</button>
+				<br><br><br><br><br><br><br><br><br><br>
+			<hr>
+		</div>
+
+		<div name = "output_text"  id = "output_text_id"></div>
+	</body>
+</html>
+
